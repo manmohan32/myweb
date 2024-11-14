@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  #tool
+  {
+  //background:red;
+  width:700px;
+  }
+  
+  #mycolor, #mycolor2
+  {
+    width:3%;
+    height:20px;
+    border-radius:100px;;
+  } 
+
+  p{font-size:15px;
+    font-family:verdana;
+    padding:20px;
+  }
+  #tool
+  {
+margin:100px;
+top:-40px;
+position:fixed;
+
+  }
+</style>
+
+<body>
+  
+
+  <h1>Using Slider By JavaScript </h1>
+<div id="tool">
+  <input id="slider1" type="range" max="50" min="15" value="15">
+  <input type="color" id="mycolor">
+  <input type="color" id="mycolor2">
+
+</div>
+
+<p id="text">On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.</p>
+
+<script>
+var s1 = document.getElementById("slider1")
+var c = document.getElementById("mycolor")
+var b = document.getElementById("mycolor2")
+
+var t = document.getElementById("text")
+
+
+document.title = "No Error";
+s1.onchange = function()
+{
+ t.style.fontSize= s1.value+"px"
+  
+}
+
+c.onchange = function()
+{
+ t.style.color= c.value
+  
+}
+
+b.onchange = function()
+{
+ document.body.style.background = b.value
+  
+}
+
+
+document.title = "No Error";
+
+</script>
+
+</body>
+</html>
