@@ -1,0 +1,106 @@
+
+<!doctype html>
+<html>
+<head><title>Animation </title>
+<a href="practicework.html"> <img src="images/lefticon.png" width="2%"> </a>
+</head>
+<style>
+
+@keyframes show
+{
+from{opacity:0;height:10px;}
+to{opacity:1;height:360px;}
+}
+  
+
+
+#menu{
+float:left;
+background:#3aabe0;
+width:200px;
+height:10px;
+padding:10px;
+text-align:center;
+box-shadow:10px 10px 10px gray;
+overflow:hidden;
+cursor:pointer;
+transition:1s;
+}
+
+#menu:hover 
+{
+height:360px;
+}
+
+
+#menu ol
+{
+
+list-style:none;
+padding:0px;
+}
+#menu li
+{
+transition:2s;
+padding:20px;
+margin:-10px;
+}
+
+ ol li:hover
+{
+background:cyan;
+border-bottom:2px black solid;}
+a:link{color:red;text-decoration:none;}
+a:visited{color:white;}
+a:hover{text-decoration:underline;}
+
+
+
+</style>
+
+<body>
+<div  style=" width:70%;background:red;margin:auto;">
+<div id="menu">
+About Us
+ <ol>
+<li><a href="#">Home</a>
+<li><a href="#">Product</a>
+<li><a href="#">Services</a>
+<li><a href="#">About</a>
+<li><a href="#">Data</a>
+<li><a href="#">Contact</a>
+</ol>
+</div>
+
+<div id="menu">
+Policy & Services
+ <ol>
+<li><a href="#">Policy</a>
+<li><a href="#">Paints/Products</a>
+<li><a href="#">Next Gen Service</a>
+<li><a href="#">Blog</a>
+<li><a href="#">Colors</a>
+<li><a href="#">Inspiration</a>
+</ol>
+</div>
+
+
+<div id="menu">
+My Destiny
+ <ol>
+<li><a href="#">Tool</a>
+<li><a href="#">Warranty</a>
+<li><a href="#">Registration</a>
+<li><a href="#">Store Locator</a>
+<li><a href="#">Head Office</a>
+<li><a href="#">Contact Us</a>
+</ol>
+</div> 
+
+</div>
+
+
+
+</body>
+
+</html>
