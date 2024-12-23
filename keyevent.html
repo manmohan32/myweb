@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <a href="practicework.html"> <img src="images/lefticon.png" width="1%"> </a>
+
+</head>
+
+<style>
+
+
+
+
+
+#heli{
+width:90%;
+height:100%;
+scale:1.40;
+
+
+background-position:bottom;
+
+display:flex;
+align-items:flex-end;
+justify-content:center;
+margin:auto;
+position:fixed;
+z-index:-1;
+top:0px;
+left:0px;
+
+font-size: 20px;
+color:black;
+
+}
+
+
+
+ .pic{
+  width: 20%;
+  position: absolute;
+  top:0px;
+  left:0px;
+ }
+
+</style>
+    
+  <img id="d1" src = "images/bird.gif" class="pic" >
+
+    
+<body>
+
+
+   
+   <script>
+    
+    var d1 = document.getElementById("d1")
+
+    var k=t=L=0
+    var s= 5
+
+    function myaction(e)
+    {
+      //alert (e.keycode)
+    /*
+      left :37
+      right:39
+      up:38
+      down:40
+      space:32
+      s:83
+      w:87
+    */
+
+    
+
+     k = e.keyCode
+
+
+       switch(k)
+    {
+        case 39:
+          L=L+s
+          if(L<window.innerWidth-200)
+         {
+          d1.style.left = L+"px"
+          d1.style.transform="rotate(0deg)"
+           document.title = L
+          }
+
+       break;
+
+       case 37:
+       d1.style.transform="rotate(180deg)"
+      d1.style.transform="rotateY(180deg)"
+       L=L-s
+       if(L>0)
+       {
+        d1.style.left = L+"px"
+          document.title = L
+       }
+
+       break;
+
+
+       case 40:
+        t=t+s
+        if(t<window.innerHeight-100)
+       {
+        d1.style.top = t+"px"
+          document.title = t
+       }
+
+       break;
+
+
+       case 38:
+        if(t>0)
+       {
+        t=t-s
+        d1.style.top = t+"px"
+          document.title = t
+
+       }
+       break;
+
+
+       case 83:
+        if(L+s)
+        {
+       d1.style.top = L+"px"
+       d1.style.transform="rotate(90deg)"
+        document.title = L
+
+      }
+      if(L<window.innerHeight)
+       {
+       d1.style.top = L+"px"
+          document.title = L
+       }
+
+       break;
+
+
+      case 87:
+      if(L>0)
+  
+        {
+          L=L-s
+        d1.style.top = L+"px"
+          document.title = L
+        d1.style.down = L+"px"
+       d1.style.transform="rotate(320deg)"
+        
+
+      }
+
+      
+      break;
+   
+
+
+       //for speed
+
+       case 32:
+        s=s+1
+        document.title = s
+        break;
+
+
+    }
+  
+   }
+
+
+  document.addEventListener("keydown",myaction)
+
+
+
+  </script>
+
+ <div id="heli">
+   <img src=  "images/p18.jpg">
+  <h1>Plain Run </h1>
+
+ </div>
+
+
+</body>
+</html>
