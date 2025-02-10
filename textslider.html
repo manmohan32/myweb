@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <a href="practicework.html"> <img src="images/lefticon.png" width="2%"> </a>
+
+</head>
+<style>
+  #tool
+  {
+  //background:red;
+  width:700px;
+  }
+  
+  #mycolor, #mycolor2
+  {
+    width:3%;
+    height:20px;
+    border-radius:100px;;
+  } 
+
+  p{font-size:15px;
+    font-family:verdana;
+    padding:20px;
+  }
+  #tool
+  {
+margin:100px;
+top:-40px;
+position:fixed;
+
+  }
+</style>
+
+<body>
+  
+
+  <h1>Using Slider (or Range Tag) By js</h1>
+<div id="tool">
+  <input id="slider1" type="range" max="50" min="15" value="15">
+  <input type="color" id="mycolor">
+  <input type="color" id="mycolor2">
+
+</div>
+
+<p id="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur suscipit ea commodi deleniti perspiciatis nobis ratione excepturi voluptate magni minima! Nemo animi repellat quibusdam dolore maxime quos doloribus itaque aperiam?
+Necessitatibus culpa, omnis illo in iste voluptatem, voluptas ipsam quam eum cumque sequi impedit doloribus, veniam et facilis quibusdam officia minima laborum ratione ullam sint temporibus magnam eius. Nulla, nostrum.
+Tempore deleniti quas, voluptates blanditiis error necessitatibus laudantium dolorum ratione impedit obcaecati dolore illo adipisci tenetur earum quia rerum, cupiditate perferendis laborum aut eaque amet nisi sapiente consectetur quisquam? Nam.
+Itaque consequuntur ex doloribus excepturi iure fugiat est numquam praesentium provident maiores exercitationem vitae, corrupti modi cupiditate laudantium officia deserunt necessitatibus. Natus impedit molestiae pariatur facilis deleniti numquam recusandae dolorum!
+Officia placeat doloremque ducimus tempora est aliquid in asperiores corrupti distinctio fugit delectus atque porro aspernatur eius consequuntur ipsum reprehenderit itaque saepe harum, veritatis error rem praesentium? Rerum, qui veniam!
+Cumque earum, modi dolorem reprehenderit illo officia eius, explicabo perferendis itaque possimus velit eligendi suscipit? Perferendis atque, tenetur suscipit fuga doloremque minima nam ut, dignissimos odio quibusdam mollitia quaerat assumenda.
+Nisi laboriosam facere maxime ducimus iste quod, totam ab assumenda tempora vitae perspiciatis facilis quibusdam est modi quae unde atque nobis? Hic porro repellendus, quas aliquam magnam suscipit quod ut.
+Quis vel natus dicta neque nam libero? Blanditiis, debitis? Amet nobis quis assumenda beatae praesentium ab alias quisquam vitae cum accusamus enim expedita, totam saepe vero aliquam molestias architecto voluptates.
+Dicta illum tenetur sequi dolorem, tempore, esse vitae doloremque, eius in dolore eos deserunt reiciendis nihil commodi exercitationem mollitia? Modi tenetur recusandae, consequatur iste quasi qui. Officiis officia assumenda magnam.
+Iusto incidunt sunt ipsam et aliquam, nemo modi labore cupiditate sit. Vero corrupti blanditiis unde eos nulla quibusdam quam aspernatur libero, laboriosam sint repudiandae! Ea nisi laudantium quaerat unde aliquam!</p>
+
+<script>
+var s1 = document.getElementById("slider1")
+var c = document.getElementById("mycolor")
+var b = document.getElementById("mycolor2")
+
+var t = document.getElementById("text")
+
+
+document.title = "No Error";
+s1.onchange = function()
+{
+ t.style.fontSize= s1.value+"px"
+  
+}
+
+c.onchange = function()
+{
+ t.style.color= c.value
+  
+}
+
+b.onchange = function()
+{
+ document.body.style.background = b.value
+  
+}
+
+
+document.title = "No Error";
+
+</script>
+
+</body>
+</html>
