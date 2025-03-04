@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<style>
+  
+#box
+{
+width:200px;
+height:50px;
+padding:20px;
+background:purple;
+color:white;
+text-align:center;
+font-size:40px;
+font-family: Arial black;
+position:absolute;
+left:-500px;
+top:10px;
+box-shadow: 10px 10px 10px gray;
+}
+body{
+  width:100%;
+  height:700px;
+
+
+}
+
+</style>
+<body>
+  <div id="box">
+    TATA
+    </div>
+
+  <script>
+
+    var b = document.getElementById("box")
+
+     document.body.style.background="images/f22.gif"
+
+
+   $(document).ready(function()
+    {
+
+     $("#box").animate({left:"600px"},1000).delay(1000).animate({top:"300px"},500).delay(500).animate({width:+400},500).delay(2000).animate({fontSize:"100px",height:"200px"},1000,myaction).delay(500).animate({left:1300},1000).delay(10).animate({left:-300},100).delay(10).animate({left:+250},10).delay(10).animate({left:-600},10).delay(1000).animate({opacity:"0"},100).animate({left:"600px",top:"200px"},1000).delay(500).animate({opacity:"1"},1000,addbackground)
+       
+
+     })        
+
+   function myaction()
+   {
+    //document.body.style.background="black"
+    b.style.boxShadow="10px 10px 10px green"
+    b.style.color="yellow"
+    b.style.transition = "0.50s"
+    b.style.transform="rotateY(720deg)"
+
+   }
+     
+
+
+   function addbackground()
+   {
+    document.body.backgroundColor="black"
+   document.body.style.backgroundImage="url(https://i.pinimg.com/originals/b8/c5/f9/b8c5f91b2f700d8a7e62d63226cdc9fa.gif)"
+
+   }
+
+      </script>
+  
+</body>
+</html>

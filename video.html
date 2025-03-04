@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head><title>video</title>
+<h1 style="text-align:center">Audio/Video </h1>
+</head>
+<a href="practicework.html"> <img src="images/lefticon.png" width="1%" > </a>
+<hr size="7"Color="black"/>
+
+
+
+
+<style>
+#player{
+display:none
+}
+#main
+{
+font-size:30px;
+cursor:pointer;
+//background:red;
+width:3%;
+}
+#main:hover #player{
+display:block;
+}
+
+
+
+/*Extra small devices(phones,600px and down)*/
+
+@media only screen and(max-width:600px)480
+{
+body{background:#4d5656;}
+}
+
+
+/* Small devices (portrait tablets and large phones,600px and up)*/
+
+@media only screen and (min-width:600px)
+{
+body{background:#e5e7e9;}
+}
+
+
+/*Medium devices(landscape tablets, 768px and up)*/
+
+@media only screen and (min-width:768px)
+{
+body{background:#d1f2eb;}
+}
+
+
+/*Large devices(laptop/desktops, 992px and up)*/
+
+@media only screen and (min-widht:992px)
+{
+body{background:#212f3d;}
+}
+
+
+</style>
+<body>
+<div id="main">
+<img src="images/sound.png" style="width:30px">
+
+	<div id="player">
+	<audio controls autoplay loop >
+	<source src="images/v1.mp3" 	type="audio/mp3">
+
+	Your browser does not support the 	audio tag.
+	</audio>
+	</div>
+
+</div>
+
+	<video controls
+	autoplay loop muted>
+	<source src="images/a1.mp4" 	type="video/mp4">
+
+	Your browser does not support the 	audio tag.
+	</video>
+</body>
+</html>

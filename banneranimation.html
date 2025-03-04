@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<a href="practicework.html"> <img src="images/lefticon.png" width="1%"> </a>
+
+<style>
+@keyframes runbanner
+{
+10%{left:0%;}
+
+20%{left:-19%;}
+30%{left:-19%;}
+
+40%{left:-38%;}
+50%{left:-38%;}
+
+60%{left:-57%;}
+70%{left:-57%;}
+
+80%{left:-76%;}
+90%{left:-76%;}
+}
+
+body{
+overflow:hidden;
+}
+
+#banner
+{
+width:600%;
+height:60px;
+}
+
+.pic
+{
+box-shadow:10px 10px 10px #e1b382;
+width:19%;
+height:600px;
+position:relative;
+margin-top:-7px;
+
+margin-left:-10px;
+animation: runbanner 15s infinite;
+}
+
+/*Extra small devices(phones,600px and down) */
+@media only screen and (max-width:600px)
+{
+body{background:green;}
+	#banner{
+	//display:none;
+	height:100px;
+	       }
+	.pic{
+     	height:150px;
+     	}
+
+}
+
+/*Small devices (portrait tablets and large phones, 600px and up)*/
+
+@media only screen and (min-width:600px)
+{
+body{background:yellow;)
+	#banner{
+	//display:none;
+	height:300px;
+	       }
+	.pic{
+     	height:300px;
+     }
+
+}
+
+
+/*media devices(landscape tablets, 768px and up)*/
+@media only screen and(min-width:768px)
+{
+body{background:cyan;}
+	#banner{
+	//display:none;
+	height:350px;
+	       }
+	.pic{
+     	height:350px;
+     	}
+
+}
+
+/*Large devices (laptops/desktops, 992px and up) */
+
+@media only screen and (min-width:992px)
+{
+body{background:orange;}
+	#banner{
+	//display:none;
+	height:600px;
+	       }	
+	.pic{
+	height:600px;
+     	}
+
+/* Extra large devices (large laptops and desktops, 1200px and up)*/
+
+@media only screen and (min-width: 1200px)
+{
+body{background:#12343b;}
+
+}
+
+</style>
+
+<body>
+<div id="banner">
+     <div>
+<img src="images/p1.jpg" class="pic">
+<img src="images/p2.jpg" class="pic">
+<img src="images/p3.jpg" class="pic">
+<img src="images/p4.jpg" class="pic">
+<img src="images/p5.jpg" class="pic">
+
+
+</div>
+</body>
+</html>
+

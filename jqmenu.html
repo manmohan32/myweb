@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+</head>
+<style>
+    body{
+        backgrund:red;
+        margin:0px;
+        padding: 0px;
+    }
+
+    #main{
+        background: cyan;
+        width: 50%;
+        margin: auto;
+       
+
+    }
+
+    #menu{
+        background: brown;
+        font-size:20px;
+        padding:10px;
+        color: white;
+        text-align: center;
+        margin-top: 10px;
+        display:inline-block ;
+        cursor: pointer;
+        transition: 2s;
+    }
+
+    #m1{
+        background: red;
+        width:20%;
+        text-align: center;
+
+    }
+
+    #m1 a{
+        width: 100%;
+        background: black;
+        color:white;
+        padding: 20px;
+        display: block;
+        font-size: 30px;
+
+    }
+
+    #m1 a:hover{
+        color: cyan;
+        text-decoration: underline;
+        background:red;
+        
+
+    }
+
+</style>
+
+<body>
+    <div id="main">
+        
+        <div id="menu">menu</div>
+            <div id="m1">
+                <a href="#">Home</a>
+                <a href="#">Product</a>
+                <a href="#">Services</a>
+                <a href="#">Data</a>
+                <a href="#">Gallery</a>
+                <a href="#">About</a>
+
+
+            
+            </div>
+
+    </div>
+
+    <script>
+        $("#m1").slideUp()
+        $(document).ready(function()
+    {
+        $("#menu").click(function()
+    {
+        $("#m1").slideToggle(1200)
+
+    })
+
+    })
+
+    </script>
+</body>
+</html>

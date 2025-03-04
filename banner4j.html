@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <a href="practicework.html"> <img src="images/lefticon.png" width="1%"> </a>
+
+</head>
+<style>
+header{
+  width:70%;
+  margin:auto;
+  text-align:center;
+  height:300px;
+  box-shadow:10px 10px 10px gray;
+}
+.picstyle 
+{
+width:100%;
+height:300px;
+position:absolute;
+top:10px;
+left:150px;
+width:70%;
+margin:auto;
+height:300px;
+box-shadow:5px 5px 5px #e1b382;
+transition:2s ease-in-out;
+border-radius: 30px;
+}
+
+</style>
+<body onLoad="show()">
+ 
+<img  class="picstyle" id="p1" src="images/p1.jpg" />
+<img  class="picstyle" id="p2" src="images/p2.jpg" />
+<img  class="picstyle" id="p3" src="images/p3.jpg" />
+<img  class="picstyle" id="p4" src="images/p4.jpg" />
+<img  class="picstyle" id="p5" src="images/p5.jpg" />
+
+
+
+
+<script>
+var c = -2
+var t 
+// Recursive function
+
+  var p1 = document.getElementById("p1")
+  var p2 = document.getElementById("p2")
+  var p3 = document.getElementById("p3")
+  var p4 = document.getElementById("p4")
+  var p5 = document.getElementById("p5")
+
+
+ function show()
+ {
+   
+     if(c<5)
+        {
+          c++
+        }
+        else
+        {
+          c=1
+        } 
+
+  switch(c)
+  {
+    case 1:
+    p5.style.transform="scale(3) "
+    p5.style.opacity = 0
+
+     break;
+     case 2:
+      p4.style.transform="scale(3)"
+     p4.style.opacity = 0
+     break;
+     case 3:
+     p3.style.transform="scale(3)" 
+     p3.style.opacity = 0
+     break;
+     case 4:
+     p2.style.transform="scale(3) "
+     p2.style.opacity = 0
+     break;
+
+     case 5:
+     p1.style.opacity = 1;p1.style.transform="scale(1) rotate(0deg)"
+     p2.style.opacity = 1;p2.style.transform="scale(1) rotate(0deg)"
+     p3.style.opacity = 1;p3.style.transform="scale(1) rotate(0deg)"
+     p4.style.opacity = 1;p4.style.transform="scale(1) rotate(0deg)"
+     break;
+
+
+     
+
+  }
+
+
+
+
+
+  document.title = c
+  t=setTimeout("show()", 2000)
+ }
+
+
+ // Timer Object
+  //
+  //var t =setInterval("show()",1000)
+
+
+</script>
+
+  
+</body>
+</html>

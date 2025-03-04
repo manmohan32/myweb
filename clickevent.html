@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <a href="practicework.html"> <img src="images/lefticon.png" width="1%"> </a>
+
+</head>
+<style>
+#bar{
+background:red;
+  text-align:right;
+  padding-right:50px;
+}
+
+#dark,#light
+{
+  background:black;
+  cursor:pointer;
+}
+
+</style>
+
+<body>
+
+
+
+
+  <div id="bar"><button id="b1" onClick="f1()">Dark mode</button>
+    
+    <button id="dark">🌙</button>
+    <button id="light">🔆</button></div>
+
+
+
+  
+  <script>
+    var d = document.getElementById("dark")
+    var L = document.getElementById("light")
+    var b = document.getElementById("b1")
+
+    var m = document.createElement("span")
+        document.body.appendChild(m)
+        
+     function f1()
+     {
+       if(document.body.style.background=="black")
+        {
+            b.innerHTML ="Dark Mode"
+        document.body.style="background:;color:;"
+          }
+          else
+          {
+            b.innerHTML ="Light Mode"
+             document.body.style="background:black;color:white;"
+          }
+
+     }
+    m.style="transition:0.50s;opacity:0;position:absolute;top:0px;left:0px;box-shadow:10px 10px 10px gray;padding:20px;background:yellow;border-radius:30px;"
+    m.innerHTML="Tool Tip"
+
+    d.onclick = function()
+    {
+    document.body.style="background:black;color:white;"
+    }
+
+    L.onclick = function()
+    {
+    document.body.style="background:;color:;"
+    }
+
+
+    d.onmouseover = function(e)
+    {
+     m.style.opacity=1
+     m.style.top = e.pageY+4+"px"
+     m.style.left = e.pageX-20+"px"
+     m.innerHTML ="Dark Mode"
+     //document.title ="x = "+e.pageX+" y = "+e.pageY
+    }
+    d.onmouseout = function()
+    {
+     m.style.opacity=0
+    }
+    L.onmouseover = function(e)
+    {
+     m.style.opacity=1
+     m.style.top = e.pageY+4+"px"
+     m.style.left = e.pageX-20+"px"
+     m.innerHTML ="Light Mode"
+     document.title ="x = "+e.pageX+" y = "+e.pageY
+    }
+    L.onmouseout = function(e)
+    {
+     m.style.opacity=0
+        }
+
+    document.title ="Ready"
+      
+    </script>
+</body>
+</html>
